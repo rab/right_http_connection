@@ -306,6 +306,8 @@ them.
           @http.verify_mode     = OpenSSL::SSL::VERIFY_PEER
           @http.verify_callback = verifyCallbackProc
           @http.ca_file         = ca_file
+        else
+          @http.verify_mode     = OpenSSL::SSL::VERIFY_NONE
         end
       end
       # open connection
